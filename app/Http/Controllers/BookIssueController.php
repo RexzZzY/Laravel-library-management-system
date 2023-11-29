@@ -109,7 +109,12 @@ class BookIssueController extends Controller
      */
     public function destroy($id)
     {
+        $book = book_issue::find($id)->book;
+        $book->status = 'Y';
+        $book->save();
+
         book_issue::find($id)->delete();
+
         return redirect()->route('book_issued');
     }
 }

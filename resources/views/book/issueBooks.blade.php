@@ -16,9 +16,8 @@
                         <thead>
                             <th>S.No</th>
                             <th>Student Name</th>
+                            <th>Student Index</th>
                             <th>Book Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
                             <th>Issue Date</th>
                             <th>Return Date</th>
                             <th>Status</th>
@@ -30,9 +29,8 @@
                                 <tr style='@if (date('Y-m-d') > $book->return_date->format('d-m-Y') && $book->issue_status == 'N') ) background:rgba(255,0,0,0.2) @endif'>
                                     <td>{{ $book->id }}</td>
                                     <td>{{ $book->student->name }}</td>
+                                    <td>{{ $book->student->index }}</td>
                                     <td>{{ $book->book->name }}</td>
-                                    <td>{{ $book->student->phone }}</td>
-                                    <td>{{ $book->student->email }}</td>
                                     <td>{{ $book->issue_date->format('d M, Y') }}</td>
                                     <td>{{ $book->return_date->format('d M, Y') }}</td>
                                     <td>

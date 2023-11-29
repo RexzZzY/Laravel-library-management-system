@@ -17,16 +17,12 @@
                                 <td><b>{{ $book->student->name }}</b></td>
                             </tr>
                             <tr>
+                                <td>StudentIndexNo : </td>
+                                <td><b>{{ $book->student->index }}</b></td>
+                            </tr>
+                            <tr>
                                 <td>Book Name : </td>
                                 <td><b>{{ $book->book->name }}</b></td>
-                            </tr>
-                            <tr>
-                                <td>Phone : </td>
-                                <td><b>{{ $book->student->phone }}</b></td>
-                            </tr>
-                            <tr>
-                                <td>Email : </td>
-                                <td><b>{{ $book->student->email }}</b></td>
                             </tr>
                             <tr>
                                 <td>Issue Date : </td>
