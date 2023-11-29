@@ -25,10 +25,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Address</label>
-                            <input type="text" class="form-control" placeholder="Address" name="address"
-                                value="{{ old('address') }}" required>
-                            @error('address')
+                            <label>Index Number</label>
+                            <input type="text" class="form-control" placeholder="Student Name" name="index"
+                                value="{{ old('index') }}" required>
+                            @error('index')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>
@@ -51,36 +51,6 @@
                             <input type="text" class="form-control" placeholder="Class" name="class"
                                 value="{{ old('class') }}" required>
                             @error('class')
-                                <div class="alert alert-danger" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label>Age</label>
-                            <input type="number" class="form-control" placeholder="Age" name="age"
-                                value="{{ old('age') }}" required>
-                            @error('age')
-                                <div class="alert alert-danger" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="phone" class="form-control" placeholder="Phone" name="phone"
-                                value="{{ old('phone') }}" required>
-                            @error('phone')
-                                <div class="alert alert-danger" role="alert">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email"
-                                value="{{ old('email') }}" required>
-                            @error('email')
                                 <div class="alert alert-danger" role="alert">
                                     {{ $message }}
                                 </div>

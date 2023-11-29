@@ -16,10 +16,10 @@
                     <table class="content-table">
                         <thead>
                             <th>S.No</th>
+                            <th>Index No.</th>
                             <th>Student Name</th>
                             <th>Gender</th>
-                            <th>Phone</th>
-                            <th>Email</th>
+                            <th>Class</th>
                             <th>View</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -28,16 +28,16 @@
                             @forelse ($students as $student)
                                 <tr>
                                     <td class="id">{{ $student->id }}</td>
+                                    <td>{{ $student->index }}</td>
                                     <td>{{ $student->name }}</td>
                                     <td class="text-capitalize">{{ $student->gender }}</td>
-                                    <td>{{ $student->phone }}</td>
-                                    <td>{{ $student->email }}</td>
+                                    <td>{{ $student->class }}</td>
                                     <td class="view">
                                         <button data-sid='{{ $student->id }}>'
                                             class="btn btn-primary view-btn">View</button>
                                     </td>
                                     <td class="edit">
-                                        <a href="{{ route('student.edit', $student) }}>" class="btn btn-success">Edit</a>
+                                        <a href="{{ route('student.edit', $student) }}" class="btn btn-success">Edit</a>
                                     </td>
                                     <td class="delete">
                                         <form action="{{ route('student.destroy', $student->id) }}" method="post"
@@ -77,7 +77,7 @@
                 type: "get",
                 success: function(student) {
                     console.log(student);
-                    form ="<tr><td>Student Name :</td><td><b>"+student['name']+"</b></td></tr><tr><td>Address :</td><td><b>"+student['address']+"</b></td></tr><tr><td>Gender :</td><td><b>"+ student['gender']+ "</b></td></tr><tr><td>Class :</td><td><b>"+ student['class']+ "</b></td></tr><tr><td>Age :</td><td><b>"+ student['age']+ "</b></td></tr><tr><td>Phone :</td><td><b>"+ student['phone']+ "</b></td></tr><tr><td>Email :</td><td><b>"+ student['email']+ "</b></td></tr>";
+                    form ="<tr><td>Student Name :</td><td><b>"+student['name']+"</b></td></tr><tr><td>Gender :</td><td><b>"+ student['gender']+ "</b></td></tr><tr><td>Class :</td><td><b>"+ student['class']+ "</b></td></tr><tr><td>Index No :</td><td><b>"+ student['index']+ "</b></td></tr>";
           console.log(form);
 
                     $("#modal-form table").html(form);
